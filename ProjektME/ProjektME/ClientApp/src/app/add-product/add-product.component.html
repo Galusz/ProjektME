@@ -1,0 +1,29 @@
+<h1>Dodaj nowy produkt:</h1>
+
+<p>This component demonstrates send data to the server.</p>
+
+<form (ngSubmit)="addProduct()">
+  <table class='table table-striped' aria-labelledby="tableLabel">
+    <thead>
+      <tr>
+        <th>Kod</th>
+        <th>Nazwa</th>
+        <th>Cena</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <input [(ngModel)]="newProduct.kod" name="kod" required>
+        </td>
+        <td>
+          <input [(ngModel)]="newProduct.nazwa" name="nazwa" required>
+        </td>
+        <td>
+          <input [(ngModel)]="newProduct.cena" name="cena" required>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="submit">Dodaj</button>
+</form>
